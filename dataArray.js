@@ -60,7 +60,14 @@ function countAuthors(){
     let authors = [];
     
     for(let category of booksByCathegory){
-        
+        for(let book of category.books){
+            if(authors.indexOf(book.author) == -1) {
+                authors.push(book.author)
+            }
+        }
     }
 
+    console.log('Total de autores:', authors.length)
 }
+
+countAuthors();
