@@ -39,7 +39,7 @@ function getScore(score){
     return scoreFinal
 }
 
-console.log(getScore(102))
+console.log(getScore(68))
 
 
 
