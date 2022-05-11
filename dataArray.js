@@ -71,3 +71,19 @@ function countAuthors(){
 }
 
 countAuthors();
+
+function booksOfAuthor(author){
+    let books = [];
+    
+    for(let category of booksByCathegory){
+        for(let book of category.books){
+            if(book.author === author){
+                books.push(book.title)
+            }
+        }
+    }
+
+    console.log(`Livros de ${author}: ${books.join(", ")}`)
+}
+
+booksOfAuthor('Elena Ferrante');
